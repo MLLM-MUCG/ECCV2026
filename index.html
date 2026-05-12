@@ -1,13 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=1180">
-  <title>ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=1180" name="viewport"/>
+<title>ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
     :root {
       --bg: #eef8f1;
       --text: #123525;
@@ -495,8 +496,8 @@
       object-fit: cover;
       flex-shrink: 0;
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
-      border: 2px solid #fff;
-      background: #fff;
+      border: none;
+      background: transparent;
     }
     .avatar-placeholder {
       display: flex;
@@ -786,150 +787,199 @@
       }
     }
 
-  </style>
+
+    /* Header-only compact hero: removed the top OpenReview button and reduced vertical whitespace. */
+    .hero {
+      min-height: 118px !important;
+      padding: 22px 48px 24px !important;
+    }
+    .topbar {
+      margin-top: 0 !important;
+      padding-right: 0 !important;
+    }
+    .content-wrap {
+      padding-top: 30px !important;
+    }
+    @media (max-width: 980px) {
+      .hero {
+        min-height: auto !important;
+        padding: 18px 24px 20px !important;
+      }
+      .content-wrap {
+        padding-top: 24px !important;
+      }
+    }
+
+  
+
+    /* Final compact hero after removing the top submit button. */
+    .hero {
+      min-height: 120px;
+      padding: 22px 48px 26px;
+    }
+    .topbar {
+      margin-top: 0;
+      padding-right: 0;
+    }
+    .content-wrap {
+      padding-top: 34px;
+    }
+    .people-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 22px 20px;
+    }
+    .person {
+      align-items: center;
+      text-align: center;
+      padding: 14px 12px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.54);
+      border: 1px solid rgba(207,230,214,0.82);
+      box-shadow: 0 12px 30px rgba(47,158,100,0.08);
+    }
+    .avatar {
+      width: 138px;
+      height: 168px;
+      border-radius: 16px;
+      object-fit: cover;
+      object-position: center;
+      border: 3px solid #fff;
+      background: #fff;
+      box-shadow: 0 14px 30px rgba(18,53,37,0.16);
+    }
+    .person .meta {
+      align-items: center;
+    }
+    @media (max-width: 980px) {
+      .hero { min-height: 110px; padding: 18px 24px 22px; }
+    }
+</style>
 </head>
 <body>
-  <header class="hero">
-    <div class="shape-cloud" aria-hidden="true">
-      <div class="shape s1"></div>
-      <div class="shape s2 alt"></div>
-      <div class="shape s3"></div>
-      <div class="shape s4 alt"></div>
-      <div class="shape s5"></div>
-      <div class="shape s6 alt"></div>
-    </div>
-    <div class="topbar">
-      <div class="brand">
-        <img src="assets/logo.png" alt="Workshop logo" onerror="this.style.display='none'">
-        <h1>ECCV 2026 Workshop: Multimodal Large Language Models for Unified Comprehension and Generation</h1>
-      </div>
-      <nav aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#topics">Topics</a>
-        <a href="#submission">Submission</a>
-        <a href="#dates">Dates</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#speakers">Speakers</a>
-        <a href="#organizers">Organizers</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-
-    <div class="hero-content hero-content-single">
-      <div class="hero-text hero-text-single">
-        <div class="hero-cta hero-cta-single">
-          <a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles" target="_blank" rel="noopener">Submit on OpenReview</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="content-wrap">
-    <section id="about" class="section">
-      <p><strong>Welcome to the ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation.</strong> This workshop aims to consolidate emerging research on unified multimodal intelligence, with a focus on systems that understand, generate, and act across modalities within a coherent framework.</p>
-      <p>Recent multimodal AI has evolved from vision-language understanding toward broader multimodal foundation models spanning image, video, audio, 3D, and generation. At the same time, the community is moving from modular pipelines toward unified tokenization, hybrid autoregressive-diffusion designs, shared representations, and synergistic learning between understanding and generation.</p>
-      <p>Our goal is to bring together researchers from academia and industry to discuss architectural designs, tokenization strategies, training objectives, evaluation protocols, and practical challenges for building general-purpose multimodal systems.</p>
-    </section>
-
-    <section id="topics" class="section">
-      <h3>Topics and Themes</h3>
-      <p>We welcome technical, position, and perspective papers related to unified multimodal modeling. Topics of interest include, but are not limited to:</p>
-      <div class="topic-grid">
-        <div class="topic-card"><h4>Unified Multimodal Understanding</h4><p>Captioning, VQA, retrieval, grounding, segmentation, reasoning, visual document understanding, long-video understanding, and cross-modal knowledge extraction.</p></div>
-        <div class="topic-card"><h4>Unified Multimodal Content Generation</h4><p>Text-to-image/video, image-to-image, controllable generation, sequential image generation, visual editing, and cross-modal generative modeling.</p></div>
-        <div class="topic-card"><h4>Unified MLLM Understanding and Generation</h4><p>Architectures and objectives that jointly model comprehension and generation, including autoregressive, diffusion, flow-based, and hybrid paradigms.</p></div>
-        <div class="topic-card"><h4>Synergistic Learning</h4><p>How understanding and generation, or different modalities and tasks, can mutually enhance each other during pre-training, instruction tuning, and post-training.</p></div>
-        <div class="topic-card"><h4>Benchmarking and Evaluation</h4><p>Evaluation protocols and benchmarks for unified multimodal systems, including realism, controllability, generalization, reasoning, and fair comparison.</p></div>
-        <div class="topic-card"><h4>Broader Directions</h4><p>Reinforcement learning for unified modeling, multimodal chain-of-thought, joint vision-language/audio/3D models, cross-task transfer, and efficient training.</p></div>
-      </div>
-    </section>
-
-    <section id="submission" class="section">
-      <h3>Submission Instructions</h3>
-      <p>Submissions should follow the ECCV 2026 workshop submission format and be submitted through OpenReview. The review process will be double-blind and handled by the workshop organizers and program committee.</p>
-      <ul>
-        <li><strong>Tiny or Short Papers:</strong> 2–4 pages, suitable for concise new ideas, preliminary results, re-analyses, implementations, or fresh perspectives.</li>
-        <li><strong>Regular Papers:</strong> Up to 9 pages, suitable for original methods, systems, benchmarks, research visions, applications, or open challenges.</li>
-        <li>All accepted papers will be presented as posters, and approximately 6–8 papers will be selected for short oral presentations.</li>
-        <li>A <strong>Best Paper Award</strong> will be selected based on reviewer scores and committee evaluation.</li>
-      </ul>
-      <div class="notice-box">Submissions are handled through the official ECCV 2026 MUCG OpenReview site.</div>
-      <div class="cta-row">
-        <a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles" target="_blank" rel="noopener">Submit on OpenReview</a>
-        <a class="btn btn-secondary" href="#dates">View Important Dates</a>
-        <a class="btn btn-secondary" href="#schedule">View Tentative Schedule</a>
-      </div>
-    </section>
-
-    <section id="dates" class="section">
-      <h3>Important Dates <span class="subtle">(AoE)</span></h3>
-      <ul class="dates">
-        <li>Archival submission deadline: <strong>July 1, 2026</strong></li>
-        <li>Archival reviews due: <strong>July 14, 2026</strong></li>
-        <li>Archival notification: <strong>July 18, 2026</strong></li>
-        <li>Non-archival submission deadline: <strong>July 25, 2026</strong></li>
-        <li>Non-archival notification: <strong>August 7, 2026</strong></li>
-        <li>Camera-ready deadline for all accepted papers: <strong>August 8–12, 2026</strong></li>
-        <li>Metadata deadline: <strong>August 20, 2026</strong></li>
-        <li>Workshop: <strong>September 8–12, 2026</strong> (during ECCV 2026)</li>
-      </ul>
-    </section>
-
-    <section id="schedule" class="section">
-      <h3>Schedule <span class="subtle">(tentative)</span></h3>
-      <p>The workshop will be hybrid, supporting both onsite and online participation. The program consists of invited keynote talks, oral and poster presentations of accepted papers, and a closing panel on future directions in unified multimodal intelligence.</p>
-      <div class="schedule-wrap">
-        <table class="schedule-table" aria-label="Tentative workshop schedule">
-          <thead>
-            <tr><th>Time</th><th>Schedule</th><th>Speaker</th></tr>
-          </thead>
-          <tbody>
-            <tr class="session-row"><td colspan="3">Morning Schedule</td></tr>
-            <tr><td class="time">08:50 – 09:00</td><td>Introduction and Opening Remarks</td><td>Organizers</td></tr>
-            <tr><td class="time">09:00 – 09:30</td><td>Keynote Talk 1</td><td>TBD</td></tr>
-            <tr><td class="time">09:30 – 10:00</td><td>Keynote Talk 2</td><td>TBD</td></tr>
-            <tr><td class="time">10:00 – 10:40</td><td>Oral Presentations (Session 1)</td><td>Selected authors</td></tr>
-            <tr class="break-row"><td class="time">10:40 – 11:00</td><td><strong><em>Coffee Break</em></strong></td><td></td></tr>
-            <tr><td class="time">11:00 – 11:30</td><td>Keynote Talk 3</td><td>TBD</td></tr>
-            <tr><td class="time">11:30 – 12:00</td><td>Keynote Talk 4</td><td>TBD</td></tr>
-            <tr><td class="time">12:00 – 12:30</td><td>Poster Session 1 (Interactive) + Virtual Gallery</td><td>Accepted authors</td></tr>
-            <tr class="lunch-row"><td class="time">12:30 – 13:30</td><td>Lunch Break</td><td></td></tr>
-            <tr class="session-row"><td colspan="3">Afternoon Schedule</td></tr>
-            <tr><td class="time">13:30 – 14:00</td><td>Keynote Talk 5</td><td>TBD</td></tr>
-            <tr><td class="time">14:00 – 14:30</td><td>Keynote Talk 6</td><td>TBD</td></tr>
-            <tr><td class="time">14:30 – 15:20</td><td>Poster Session 2 (Interactive) + Virtual Gallery</td><td>Accepted authors</td></tr>
-            <tr class="break-row"><td class="time">15:20 – 15:50</td><td><strong><em>Coffee Break</em></strong></td><td></td></tr>
-            <tr><td class="time">15:50 – 16:20</td><td>Keynote Talk 7</td><td>TBD</td></tr>
-            <tr><td class="time">16:20 – 17:20</td><td>Panel Discussion</td><td>TBD</td></tr>
-            <tr><td class="time">17:20 – 17:30</td><td>Closing Remarks + Best Paper Award</td><td>Organizers</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section id="speakers" class="section">
-      <h3>Invited Speakers <span class="subtle">(confirmed / tentative)</span></h3>
-      <div class="people-grid">
-        <div class="person"><a href="https://sites.google.com/view/showlab" target="_blank" rel="noopener"><div class="avatar initials" aria-hidden="true">MZ</div></a><div class="meta"><span class="role">Confirmed</span><span class="name">Mike Z. Shou</span><span class="aff">National University of Singapore</span></div></div><div class="person"><a href="https://www.cs.unc.edu/~mbansal/" target="_blank" rel="noopener"><div class="avatar initials" aria-hidden="true">MB</div></a><div class="meta"><span class="role">Confirmed</span><span class="name">Mohit Bansal</span><span class="aff">University of North Carolina Chapel Hill</span></div></div><div class="person"><div class="avatar initials" aria-hidden="true">HF</div><div class="meta"><span class="role">Confirmed</span><span class="name">Haoqi Fan</span><span class="aff">ByteDance Seed</span></div></div><div class="person"><div class="avatar initials" aria-hidden="true">CC</div><div class="meta"><span class="role">Confirmed</span><span class="name">Chen Change Loy</span><span class="aff">Nanyang Technological University</span></div></div><div class="person"><a href="https://www.rogerioferis.org/" target="_blank" rel="noopener"><div class="avatar initials" aria-hidden="true">RS</div></a><div class="meta"><span class="role">Confirmed</span><span class="name">Rogerio Schmidt Feris</span><span class="aff">MIT-IBM Watson AI Lab</span></div></div><div class="person"><a href="https://maureenzou.github.io/" target="_blank" rel="noopener"><div class="avatar initials" aria-hidden="true">XZ</div></a><div class="meta"><span class="role">Confirmed</span><span class="name">Xueyan Zou</span><span class="aff">UC San Diego</span></div></div><div class="person"><a href="https://j-min.io/" target="_blank" rel="noopener"><div class="avatar initials" aria-hidden="true">JC</div></a><div class="meta"><span class="role">Confirmed</span><span class="name">Jaemin Cho</span><span class="aff">Allen Institute for AI / Johns Hopkins University</span></div></div>
-      </div>
-    </section>
-
-    <section id="organizers" class="section">
-      <h3>Organizing Committee</h3>
-      <div class="people-grid">
-        <div class="person"><a href="https://sqwu.top/" target="_blank" rel="noopener"><div class="avatar initials" aria-hidden="true">SW</div></a><div class="meta"><span class="role">Organizer</span><span class="name">Shengqiong Wu</span><span class="aff">National University of Singapore</span></div></div><div class="person"><a href="https://sierkinhane.github.io/" target="_blank" rel="noopener"><div class="avatar initials" aria-hidden="true">JX</div></a><div class="meta"><span class="role">Organizer</span><span class="name">Jinheng Xie</span><span class="aff">National University of Singapore</span></div></div><div class="person"><div class="avatar initials" aria-hidden="true">HL</div><div class="meta"><span class="role">Organizer</span><span class="name">Haozhe Liu</span><span class="aff">KAUST</span></div></div><div class="person"><div class="avatar initials" aria-hidden="true">EX</div><div class="meta"><span class="role">Organizer</span><span class="name">Enze Xie</span><span class="aff">NVIDIA Research / MIT HAN Lab</span></div></div><div class="person"><div class="avatar initials" aria-hidden="true">SD</div><div class="meta"><span class="role">Organizer</span><span class="name">Sivan Doveh</span><span class="aff">Stanford University</span></div></div><div class="person"><div class="avatar initials" aria-hidden="true">AK</div><div class="meta"><span class="role">Organizer</span><span class="name">Anna Kukleva</span><span class="aff">Max Planck Institute for Informatics</span></div></div><div class="person"><div class="avatar initials" aria-hidden="true">XP</div><div class="meta"><span class="role">Organizer</span><span class="name">Xichen Pan</span><span class="aff">New York University</span></div></div><div class="person"><div class="avatar initials" aria-hidden="true">JM</div><div class="meta"><span class="role">Organizer</span><span class="name">Jehanzeb Mirza</span><span class="aff">MIT CSAIL</span></div></div>
-      </div>
-    </section>
-
-    <section id="diversity" class="section">
-      <h3>Diversity and Inclusion</h3>
-      <p>We are committed to promoting diversity and inclusion across the organizing committee, invited speakers, program committee, accepted papers, and audience. We will proactively encourage submissions from underrepresented groups and institutions, provide inclusive wording in the call for papers, support mentoring opportunities during poster sessions and panels, and ensure virtual access for remote or resource-constrained participants.</p>
-    </section>
-
-    <section id="contact" class="section">
-      <h3>Contact</h3>
-      <p>Questions? Please contact the workshop organizers. A dedicated contact email will be added soon.</p>
-    </section>
-  </main>
+<header class="hero">
+<div aria-hidden="true" class="shape-cloud">
+<div class="shape s1"></div>
+<div class="shape s2 alt"></div>
+<div class="shape s3"></div>
+<div class="shape s4 alt"></div>
+<div class="shape s5"></div>
+<div class="shape s6 alt"></div>
+</div>
+<div class="topbar">
+<div class="brand">
+<img alt="Workshop logo" onerror="this.style.display='none'" src="assets/logo.png"/>
+<h1>ECCV 2026 Workshop: Multimodal Large Language Models for Unified Comprehension and Generation</h1>
+</div>
+<nav aria-label="Primary">
+<a href="#about">About</a>
+<a href="#topics">Topics</a>
+<a href="#submission">Submission</a>
+<a href="#dates">Dates</a>
+<a href="#schedule">Schedule</a>
+<a href="#speakers">Speakers</a>
+<a href="#organizers">Organizers</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<main class="content-wrap">
+<section class="section" id="about">
+<p><strong>Welcome to the ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation.</strong> This workshop aims to consolidate emerging research on unified multimodal intelligence, with a focus on systems that understand, generate, and act across modalities within a coherent framework.</p>
+<p>Recent multimodal AI has evolved from vision-language understanding toward broader multimodal foundation models spanning image, video, audio, 3D, and generation. At the same time, the community is moving from modular pipelines toward unified tokenization, hybrid autoregressive-diffusion designs, shared representations, and synergistic learning between understanding and generation.</p>
+<p>Our goal is to bring together researchers from academia and industry to discuss architectural designs, tokenization strategies, training objectives, evaluation protocols, and practical challenges for building general-purpose multimodal systems.</p>
+</section>
+<section class="section" id="topics">
+<h3>Topics and Themes</h3>
+<p>We welcome technical, position, and perspective papers related to unified multimodal modeling. Topics of interest include, but are not limited to:</p>
+<div class="topic-grid">
+<div class="topic-card"><h4>Unified Multimodal Understanding</h4><p>Captioning, VQA, retrieval, grounding, segmentation, reasoning, visual document understanding, long-video understanding, and cross-modal knowledge extraction.</p></div>
+<div class="topic-card"><h4>Unified Multimodal Content Generation</h4><p>Text-to-image/video, image-to-image, controllable generation, sequential image generation, visual editing, and cross-modal generative modeling.</p></div>
+<div class="topic-card"><h4>Unified MLLM Understanding and Generation</h4><p>Architectures and objectives that jointly model comprehension and generation, including autoregressive, diffusion, flow-based, and hybrid paradigms.</p></div>
+<div class="topic-card"><h4>Synergistic Learning</h4><p>How understanding and generation, or different modalities and tasks, can mutually enhance each other during pre-training, instruction tuning, and post-training.</p></div>
+<div class="topic-card"><h4>Benchmarking and Evaluation</h4><p>Evaluation protocols and benchmarks for unified multimodal systems, including realism, controllability, generalization, reasoning, and fair comparison.</p></div>
+<div class="topic-card"><h4>Broader Directions</h4><p>Reinforcement learning for unified modeling, multimodal chain-of-thought, joint vision-language/audio/3D models, cross-task transfer, and efficient training.</p></div>
+</div>
+</section>
+<section class="section" id="submission">
+<h3>Submission Instructions</h3>
+<p>Submissions should follow the ECCV 2026 workshop submission format and be submitted through OpenReview. The review process will be double-blind and handled by the workshop organizers and program committee.</p>
+<ul>
+<li><strong>Tiny or Short Papers:</strong> 2–4 pages, suitable for concise new ideas, preliminary results, re-analyses, implementations, or fresh perspectives.</li>
+<li><strong>Regular Papers:</strong> Up to 9 pages, suitable for original methods, systems, benchmarks, research visions, applications, or open challenges.</li>
+<li>All accepted papers will be presented as posters, and approximately 6–8 papers will be selected for short oral presentations.</li>
+<li>A <strong>Best Paper Award</strong> will be selected based on reviewer scores and committee evaluation.</li>
+</ul>
+<div class="notice-box">Submissions are handled through the official ECCV 2026 MUCG OpenReview site.</div>
+<div class="cta-row">
+<a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles" rel="noopener" target="_blank">Submit on OpenReview</a>
+<a class="btn btn-secondary" href="#dates">View Important Dates</a>
+<a class="btn btn-secondary" href="#schedule">View Tentative Schedule</a>
+</div>
+</section>
+<section class="section" id="dates">
+<h3>Important Dates <span class="subtle">(AoE)</span></h3>
+<ul class="dates">
+<li>Archival submission deadline: <strong>July 1, 2026</strong></li>
+<li>Archival reviews due: <strong>July 14, 2026</strong></li>
+<li>Archival notification: <strong>July 18, 2026</strong></li>
+<li>Non-archival submission deadline: <strong>July 25, 2026</strong></li>
+<li>Non-archival notification: <strong>August 7, 2026</strong></li>
+<li>Camera-ready deadline for all accepted papers: <strong>August 8–12, 2026</strong></li>
+<li>Metadata deadline: <strong>August 20, 2026</strong></li>
+<li>Workshop: <strong>September 8–12, 2026</strong> (during ECCV 2026)</li>
+</ul>
+</section>
+<section class="section" id="schedule">
+<h3>Schedule <span class="subtle">(tentative)</span></h3>
+<p>The workshop will be hybrid, supporting both onsite and online participation. The program consists of invited keynote talks, oral and poster presentations of accepted papers, and a closing panel on future directions in unified multimodal intelligence.</p>
+<div class="schedule-wrap">
+<table aria-label="Tentative workshop schedule" class="schedule-table">
+<thead>
+<tr><th>Time</th><th>Schedule</th><th>Speaker</th></tr>
+</thead>
+<tbody>
+<tr class="session-row"><td colspan="3">Morning Schedule</td></tr>
+<tr><td class="time">08:50 – 09:00</td><td>Introduction and Opening Remarks</td><td>Organizers</td></tr>
+<tr><td class="time">09:00 – 09:30</td><td>Keynote Talk 1</td><td>TBD</td></tr>
+<tr><td class="time">09:30 – 10:00</td><td>Keynote Talk 2</td><td>TBD</td></tr>
+<tr><td class="time">10:00 – 10:40</td><td>Oral Presentations (Session 1)</td><td>Selected authors</td></tr>
+<tr class="break-row"><td class="time">10:40 – 11:00</td><td><strong><em>Coffee Break</em></strong></td><td></td></tr>
+<tr><td class="time">11:00 – 11:30</td><td>Keynote Talk 3</td><td>TBD</td></tr>
+<tr><td class="time">11:30 – 12:00</td><td>Keynote Talk 4</td><td>TBD</td></tr>
+<tr><td class="time">12:00 – 12:30</td><td>Poster Session 1 (Interactive) + Virtual Gallery</td><td>Accepted authors</td></tr>
+<tr class="lunch-row"><td class="time">12:30 – 13:30</td><td>Lunch Break</td><td></td></tr>
+<tr class="session-row"><td colspan="3">Afternoon Schedule</td></tr>
+<tr><td class="time">13:30 – 14:00</td><td>Keynote Talk 5</td><td>TBD</td></tr>
+<tr><td class="time">14:00 – 14:30</td><td>Keynote Talk 6</td><td>TBD</td></tr>
+<tr><td class="time">14:30 – 15:20</td><td>Poster Session 2 (Interactive) + Virtual Gallery</td><td>Accepted authors</td></tr>
+<tr class="break-row"><td class="time">15:20 – 15:50</td><td><strong><em>Coffee Break</em></strong></td><td></td></tr>
+<tr><td class="time">15:50 – 16:20</td><td>Keynote Talk 7</td><td>TBD</td></tr>
+<tr><td class="time">16:20 – 17:20</td><td>Panel Discussion</td><td>TBD</td></tr>
+<tr><td class="time">17:20 – 17:30</td><td>Closing Remarks + Best Paper Award</td><td>Organizers</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="section" id="speakers">
+<h3>Invited Speakers <span class="subtle">(confirmed / tentative)</span></h3>
+<div class="people-grid">
+<div class="person"><a href="https://sites.google.com/view/showlab" rel="noopener" target="_blank"><img alt="Mike Z. Shou" class="avatar" loading="lazy" src="assets/photos/mike_shou.jpg"/></a><div class="meta"><span class="role">Confirmed</span><span class="name">Mike Z. Shou</span><span class="aff">National University of Singapore</span></div></div><div class="person"><a href="https://www.cs.unc.edu/~mbansal/" rel="noopener" target="_blank"><img alt="Mohit Bansal" class="avatar" loading="lazy" src="assets/photos/mohit_bansal.png"/></a><div class="meta"><span class="role">Confirmed</span><span class="name">Mohit Bansal</span><span class="aff">University of North Carolina Chapel Hill</span></div></div><div class="person"><a href="https://haoqifan.github.io/" rel="noopener" target="_blank"><img alt="Haoqi Fan" class="avatar" loading="lazy" src="assets/photos/haoqi_fan.jpg"/></a><div class="meta"><span class="role">Confirmed</span><span class="name">Haoqi Fan</span><span class="aff">ByteDance Seed</span></div></div><div class="person"><a href="https://www.mmlab-ntu.com/person/ccloy/" rel="noopener" target="_blank"><img alt="Chen Change Loy" class="avatar" loading="lazy" src="assets/photos/chen_change_loy.png"/></a><div class="meta"><span class="role">Confirmed</span><span class="name">Chen Change Loy</span><span class="aff">Nanyang Technological University</span></div></div><div class="person"><a href="https://www.rogerioferis.org/" rel="noopener" target="_blank"><img alt="Rogerio Schmidt Feris" class="avatar" loading="lazy" src="assets/photos/rogerio_feris.webp"/></a><div class="meta"><span class="role">Confirmed</span><span class="name">Rogerio Schmidt Feris</span><span class="aff">MIT-IBM Watson AI Lab</span></div></div><div class="person"><a href="https://maureenzou.github.io/" rel="noopener" target="_blank"><img alt="Xueyan Zou" class="avatar" loading="lazy" src="assets/photos/xueyan_zou.jpg"/></a><div class="meta"><span class="role">Confirmed</span><span class="name">Xueyan Zou</span><span class="aff">UC San Diego</span></div></div><div class="person"><a href="https://j-min.io/" rel="noopener" target="_blank"><img alt="Jaemin Cho" class="avatar" loading="lazy" src="assets/photos/jaemin_cho.png"/></a><div class="meta"><span class="role">Confirmed</span><span class="name">Jaemin Cho</span><span class="aff">Allen Institute for AI / Johns Hopkins University</span></div></div>
+</div>
+</section>
+<section class="section" id="organizers">
+<h3>Organizing Committee</h3>
+<div class="people-grid">
+<div class="person"><a href="https://sqwu.top/" rel="noopener" target="_blank"><img alt="Shengqiong Wu" class="avatar" loading="lazy" src="assets/photos/shengqiong_wu.jpg"/></a><div class="meta"><span class="role">Organizer</span><span class="name">Shengqiong Wu</span><span class="aff">National University of Singapore</span></div></div><div class="person"><a href="https://sierkinhane.github.io/" rel="noopener" target="_blank"><img alt="Jinheng Xie" class="avatar" loading="lazy" src="assets/photos/jinheng_xie.jpg"/></a><div class="meta"><span class="role">Organizer</span><span class="name">Jinheng Xie</span><span class="aff">National University of Singapore</span></div></div><div class="person"><a href="https://haozheliu-st.github.io/" rel="noopener" target="_blank"><img alt="Haozhe Liu" class="avatar" loading="lazy" src="assets/photos/haozhe_liu.jpg"/></a><div class="meta"><span class="role">Organizer</span><span class="name">Haozhe Liu</span><span class="aff">KAUST</span></div></div><div class="person"><a href="https://xieenze.github.io/" rel="noopener" target="_blank"><img alt="Enze Xie" class="avatar" loading="lazy" src="assets/photos/enze_xie.png"/></a><div class="meta"><span class="role">Organizer</span><span class="name">Enze Xie</span><span class="aff">NVIDIA Research / MIT HAN Lab</span></div></div><div class="person"><a href="https://sivandoveh.github.io/" rel="noopener" target="_blank"><img alt="Sivan Doveh" class="avatar" loading="lazy" src="assets/photos/sivan_doveh.jpg"/></a><div class="meta"><span class="role">Organizer</span><span class="name">Sivan Doveh</span><span class="aff">Stanford University</span></div></div><div class="person"><a href="https://annusha.github.io/" rel="noopener" target="_blank"><img alt="Anna Kukleva" class="avatar" loading="lazy" src="assets/photos/anna_kukleva.jpg"/></a><div class="meta"><span class="role">Organizer</span><span class="name">Anna Kukleva</span><span class="aff">Max Planck Institute for Informatics</span></div></div><div class="person"><a href="https://xichenpan.com/" rel="noopener" target="_blank"><img alt="Xichen Pan" class="avatar" loading="lazy" src="assets/photos/xichen_pan.jpeg"/></a><div class="meta"><span class="role">Organizer</span><span class="name">Xichen Pan</span><span class="aff">New York University</span></div></div><div class="person"><a href="https://jmiemirza.github.io/" rel="noopener" target="_blank"><img alt="Jehanzeb Mirza" class="avatar" loading="lazy" src="assets/photos/jehanzeb_mirza.png"/></a><div class="meta"><span class="role">Organizer</span><span class="name">Jehanzeb Mirza</span><span class="aff">MIT CSAIL</span></div></div>
+</div>
+</section>
+<section class="section" id="diversity">
+<h3>Diversity and Inclusion</h3>
+<p>We are committed to promoting diversity and inclusion across the organizing committee, invited speakers, program committee, accepted papers, and audience. We will proactively encourage submissions from underrepresented groups and institutions, provide inclusive wording in the call for papers, support mentoring opportunities during poster sessions and panels, and ensure virtual access for remote or resource-constrained participants.</p>
+</section>
+<section class="section" id="contact">
+<h3>Contact</h3>
+<p>Questions? Please contact the workshop organizers. A dedicated contact email will be added soon.</p>
+</section>
+</main>
 </body>
 </html>
