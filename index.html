@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1180">
-  <title>ECCV 2026 Workshop on Multimodal Generalists</title>
+  <title>ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,10 +33,12 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      padding: 32px 56px 32px;
-      background: radial-gradient(circle at 80% 10%, rgba(127, 214, 169, 0.42), transparent 34%),
-                  radial-gradient(circle at 15% 75%, rgba(186, 230, 194, 0.55), transparent 32%),
-                  linear-gradient(135deg, #f8fff9 0%, #e6f6eb 52%, #d9f0e2 100%);
+      min-height: 560px;
+      padding: 24px 48px 48px;
+      background: radial-gradient(circle at 78% 18%, rgba(127, 214, 169, 0.45), transparent 30%),
+                  radial-gradient(circle at 18% 78%, rgba(186, 230, 194, 0.52), transparent 30%),
+                  linear-gradient(135deg, #f8fff9 0%, #e8f8ed 48%, #d6efe0 100%);
+      overflow: hidden;
     }
     .shape-cloud {
       position: absolute;
@@ -67,12 +69,14 @@
       100% { transform: translate3d(0,0,0) scale(1); }
     }
     .topbar {
+      position: relative;
+      z-index: 4;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 20px;
-      padding-right: 140px;
-      margin-top: 14px;
+      padding-right: 150px;
+      margin-top: 4px;
     }
     .brand {
       display: flex;
@@ -80,25 +84,26 @@
       gap: 12px;
     }
     .brand img {
-      width: 64px;
-      height: 64px;
+      width: 52px;
+      height: 52px;
       object-fit: contain;
-      filter: drop-shadow(0 12px 24px rgba(0,0,0,0.25));
+      filter: drop-shadow(0 10px 20px rgba(18,53,37,0.16));
       border-radius: 10px;
     }
+    .brand img:not([src]), .brand img[src=""] { display: none; }
     .brand h1 {
       margin: 0;
-      font-size: 22px;
-      font-weight: 700;
+      font-size: 20px;
+      font-weight: 800;
       letter-spacing: -0.2px;
     }
     nav {
       display: flex;
-      gap: 18px;
+      gap: 16px;
       flex-wrap: nowrap;
       align-items: center;
-      font-weight: 700;
-      font-size: 15px;
+      font-weight: 800;
+      font-size: 14px;
       overflow: visible;
       white-space: nowrap;
       scrollbar-width: none;
@@ -138,8 +143,8 @@
     }
     .conference-badge {
       position: absolute;
-      top: 44px;
-      right: 18px;
+      top: 28px;
+      right: 28px;
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 14px;
@@ -157,16 +162,68 @@
       display: block;
     }
 
-    .hero-text {
-      max-width: 520px;
-      margin-top: 170px;
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(460px, 0.95fr) minmax(340px, 0.7fr);
+      align-items: end;
+      gap: 56px;
+      max-width: 1180px;
+      width: 100%;
+      margin-top: 82px;
     }
+    .hero-text {
+      max-width: 760px;
+      margin-top: 0;
+    }
+    .hero-side {
+      align-self: stretch;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 16px;
+      padding-bottom: 2px;
+    }
+    .hero-card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(207, 230, 214, 0.9);
+      border-radius: 22px;
+      padding: 22px 24px;
+      box-shadow: 0 24px 60px rgba(47, 158, 100, 0.16);
+      backdrop-filter: blur(10px);
+    }
+    .hero-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+    .hero-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .hero-stat {
+      background: rgba(255,255,255,0.64);
+      border: 1px solid rgba(207, 230, 214, 0.9);
+      border-radius: 16px;
+      padding: 14px 16px;
+      box-shadow: 0 10px 28px rgba(47, 158, 100, 0.09);
+    }
+    .hero-stat strong { display: block; font-size: 20px; line-height: 1.2; }
+    .hero-stat span { display: block; margin-top: 4px; color: var(--muted); font-size: 13px; font-weight: 700; }
     .hero-panel h2 { margin: 0 0 12px; }
     .hero-panel p { margin: 0; color: #111827; font-weight: 600; }
 
     .date-pill {
       display: inline-block;
-      padding: 8px 14px;
+      padding: 10px 14px;
       background: rgba(47, 158, 100, 0.14);
       color: #123525;
       border-radius: 12px;
@@ -179,14 +236,16 @@
     }
 
     .hero-cta {
-      position: absolute;
-      right: 56px;
-      bottom: 20px;
+      position: static;
       z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
     }
     .hero-text h2 {
-      margin: 0 0 18px;
-      font-size: clamp(44px, 6.5vw, 64px);
+      margin: 0 0 20px;
+      font-size: clamp(44px, 5vw, 76px);
       font-weight: 700;
       line-height: 1.08;
       letter-spacing: -0.6px;
@@ -246,10 +305,10 @@
     .content-wrap {
       max-width: 1180px;
       margin: 0 auto;
-      padding: 56px 24px 140px;
+      padding: 44px 24px 120px;
       display: flex;
       flex-direction: column;
-      gap: 48px;
+      gap: 42px;
     }
     .section {
       padding-bottom: 22px;
@@ -680,14 +739,57 @@
       font-weight: 700;
     }
 
+    @media (max-width: 980px) {
+      .hero { min-height: auto; padding: 22px 24px 38px; }
+      .topbar { padding-right: 0; align-items: flex-start; flex-direction: column; }
+      .conference-badge { position: static; align-self: flex-start; margin-bottom: 10px; }
+      nav { flex-wrap: wrap; gap: 12px; }
+      .hero-content { grid-template-columns: 1fr; margin-top: 52px; gap: 26px; }
+      .hero-side { max-width: 760px; }
+      .hero-text h2 { font-size: clamp(40px, 10vw, 64px); }
+    }
+
+
+    /* Submit-only compact hero. */
+    .hero {
+      min-height: 220px;
+      padding: 24px 48px 30px;
+    }
+    .hero-content-single {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1280px;
+      width: 100%;
+      margin: 44px auto 0;
+    }
+    .hero-text-single {
+      max-width: none;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-cta-single {
+      margin-top: 0;
+      justify-content: center;
+      width: 100%;
+    }
+    @media (max-width: 980px) {
+      .hero {
+        min-height: 210px;
+        padding: 20px 24px 28px;
+      }
+      .hero-content-single {
+        margin-top: 34px;
+      }
+    }
+
   </style>
 </head>
 <body>
   <header class="hero">
-    <a class="conference-badge" href="https://eccv.ecva.net/" target="_blank" rel="noopener" aria-label="ECCV 2026">
-      <span>ECCV</span>
-      <small>2026 Workshop</small>
-    </a>
     <div class="shape-cloud" aria-hidden="true">
       <div class="shape s1"></div>
       <div class="shape s2 alt"></div>
@@ -698,8 +800,8 @@
     </div>
     <div class="topbar">
       <div class="brand">
-        <img src="assets/logo.png" alt="Workshop logo">
-        <h1>ECCV 2026 Workshop: Multimodal Generalists</h1>
+        <img src="assets/logo.png" alt="Workshop logo" onerror="this.style.display='none'">
+        <h1>ECCV 2026 Workshop: Multimodal Large Language Models for Unified Comprehension and Generation</h1>
       </div>
       <nav aria-label="Primary">
         <a href="#about">About</a>
@@ -713,18 +815,18 @@
       </nav>
     </div>
 
-    <div class="hero-text">
-      <h2>Unifying<br><span class="accent-word">Modalities</span>,<br><span class="accent-word">Architectures</span>,<br>and <span class="accent-word">Paradigms</span>.</h2>
-      <p class="date-pill">🗓️ September 8–12, 2026<br>ECCV 2026 Workshop<br>Multimodal Generalists: Unifying Modalities, Architectures, Paradigms at Once</p>
-    </div>
-    <div class="hero-cta">
-      <a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles" target="_blank" rel="noopener">Submit on OpenReview</a>
+    <div class="hero-content hero-content-single">
+      <div class="hero-text hero-text-single">
+        <div class="hero-cta hero-cta-single">
+          <a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles" target="_blank" rel="noopener">Submit on OpenReview</a>
+        </div>
+      </div>
     </div>
   </header>
 
   <main class="content-wrap">
     <section id="about" class="section">
-      <p><strong>Welcome to the ECCV 2026 Workshop on Multimodal Generalists: Unifying Modalities, Architectures, Paradigms at Once.</strong> This workshop aims to consolidate emerging research on unified multimodal intelligence, with a focus on systems that understand, generate, and act across modalities within a coherent framework.</p>
+      <p><strong>Welcome to the ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation.</strong> This workshop aims to consolidate emerging research on unified multimodal intelligence, with a focus on systems that understand, generate, and act across modalities within a coherent framework.</p>
       <p>Recent multimodal AI has evolved from vision-language understanding toward broader multimodal foundation models spanning image, video, audio, 3D, and generation. At the same time, the community is moving from modular pipelines toward unified tokenization, hybrid autoregressive-diffusion designs, shared representations, and synergistic learning between understanding and generation.</p>
       <p>Our goal is to bring together researchers from academia and industry to discuss architectural designs, tokenization strategies, training objectives, evaluation protocols, and practical challenges for building general-purpose multimodal systems.</p>
     </section>
