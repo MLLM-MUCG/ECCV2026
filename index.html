@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=1180" name="viewport"/>
-<title>ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation</title>
+<title>Multimodal Large Language Models for Unified Comprehension and Generation</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -853,6 +853,82 @@
     @media (max-width: 980px) {
       .hero { min-height: 110px; padding: 18px 24px 22px; }
     }
+
+    /* Final header alignment: center title block and nav block both vertically and horizontally. */
+    .hero {
+      min-height: 88px !important;
+      height: 88px !important;
+      padding: 0 48px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    .topbar {
+      width: 100% !important;
+      max-width: 1920px !important;
+      min-height: 88px !important;
+      margin: 0 auto !important;
+      padding: 0 !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      align-items: center !important;
+      justify-items: center !important;
+      gap: 24px !important;
+    }
+
+    .brand {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+    }
+
+    .brand h1 {
+      margin: 0 !important;
+      line-height: 1.25 !important;
+      text-align: center !important;
+      white-space: nowrap !important;
+    }
+
+    nav {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      text-align: center !important;
+      gap: 16px !important;
+    }
+
+    nav a {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    @media (max-width: 1180px) {
+      .hero {
+        height: auto !important;
+        min-height: 96px !important;
+        padding: 18px 24px !important;
+      }
+
+      .topbar {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+        gap: 14px !important;
+      }
+
+      .brand h1 {
+        white-space: normal !important;
+      }
+
+      nav {
+        flex-wrap: wrap !important;
+      }
+    }
+
 </style>
 </head>
 <body>
