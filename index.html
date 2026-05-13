@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=1180" name="viewport"/>
-<title>Multimodal Large Language Models for Unified Comprehension and Generation</title>
+<title>ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -854,11 +854,13 @@
       .hero { min-height: 110px; padding: 18px 24px 22px; }
     }
 
-    /* Final header alignment: center title block and nav block both vertically and horizontally. */
+    /* Final top header layout:
+       Row 1: workshop title centered.
+       Row 2: navigation links centered. */
     .hero {
-      min-height: 88px !important;
-      height: 88px !important;
-      padding: 0 48px !important;
+      min-height: 112px !important;
+      height: auto !important;
+      padding: 18px 48px 20px !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
@@ -867,14 +869,15 @@
     .topbar {
       width: 100% !important;
       max-width: 1920px !important;
-      min-height: 88px !important;
+      min-height: auto !important;
       margin: 0 auto !important;
       padding: 0 !important;
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
+      display: flex !important;
+      flex-direction: column !important;
       align-items: center !important;
-      justify-items: center !important;
-      gap: 24px !important;
+      justify-content: center !important;
+      gap: 12px !important;
+      text-align: center !important;
     }
 
     .brand {
@@ -887,6 +890,7 @@
 
     .brand h1 {
       margin: 0 !important;
+      font-size: 21px !important;
       line-height: 1.25 !important;
       text-align: center !important;
       white-space: nowrap !important;
@@ -897,35 +901,59 @@
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      text-align: center !important;
+      flex-wrap: wrap !important;
       gap: 16px !important;
+      text-align: center !important;
+      line-height: 1 !important;
     }
 
     nav a {
       display: inline-flex !important;
       align-items: center !important;
       justify-content: center !important;
+      line-height: 1 !important;
     }
 
     @media (max-width: 1180px) {
       .hero {
-        height: auto !important;
-        min-height: 96px !important;
-        padding: 18px 24px !important;
+        min-height: auto !important;
+        padding: 16px 24px 18px !important;
       }
 
       .topbar {
-        grid-template-columns: 1fr !important;
-        min-height: auto !important;
-        gap: 14px !important;
+        gap: 12px !important;
       }
 
       .brand h1 {
         white-space: normal !important;
+        font-size: 19px !important;
       }
 
       nav {
-        flex-wrap: wrap !important;
+        gap: 12px !important;
+      }
+    }
+
+
+    /* Make the second-row navigation larger. */
+    nav {
+      font-size: 17px !important;
+      font-weight: 800 !important;
+      gap: 20px !important;
+    }
+
+    nav a {
+      font-size: 17px !important;
+      line-height: 1.15 !important;
+    }
+
+    @media (max-width: 1180px) {
+      nav,
+      nav a {
+        font-size: 16px !important;
+      }
+      nav {
+        gap: 14px !important;
       }
     }
 
