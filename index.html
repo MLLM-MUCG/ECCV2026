@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=1180" name="viewport"/>
-<title>MUCG @ ECCV 2026</title>
-<link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<style>
+  <meta charset="utf-8" />
+  <meta content="width=1180" name="viewport" />
+  <title>MUCG @ ECCV 2026</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
     /* ─── Variables ─── */
     :root {
       --bg: #fafaf8;
@@ -21,7 +23,11 @@
       --surface: #f2f0ec;
     }
 
-    *, *::before, *::after { box-sizing: border-box; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -34,7 +40,10 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     /* ─── Navigation ─── */
     #sticky-nav {
@@ -115,7 +124,9 @@
     }
 
     /* ─── Hero ─── */
-    .shape-cloud { display: none; }
+    .shape-cloud {
+      display: none;
+    }
 
     .hero {
       position: relative;
@@ -129,16 +140,17 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(10, 18, 12, 0.62) 0%,
-        rgba(10, 18, 12, 0.52) 60%,
-        rgba(10, 18, 12, 0.68) 100%
-      );
+      background: linear-gradient(to bottom,
+          rgba(10, 18, 12, 0.62) 0%,
+          rgba(10, 18, 12, 0.52) 60%,
+          rgba(10, 18, 12, 0.68) 100%);
       z-index: 0;
     }
 
-    .hero-main { position: relative; z-index: 1; }
+    .hero-main {
+      position: relative;
+      z-index: 1;
+    }
 
     .hero-main {
       max-width: 1100px;
@@ -154,7 +166,7 @@
       margin-bottom: 24px;
       font-size: 35px;
       font-weight: 700;
-      color: rgba(255,255,255,0.9);
+      color: rgba(255, 255, 255, 0.9);
       letter-spacing: 0.03em;
       text-transform: uppercase;
       line-height: 1.2;
@@ -212,13 +224,13 @@
       gap: 8px;
       font-size: 19px;
       font-weight: 500;
-      color: rgba(255,255,255,0.95);
+      color: rgba(255, 255, 255, 0.95);
     }
 
-    .hero-pill + .hero-pill::before {
+    .hero-pill+.hero-pill::before {
       content: '·';
       margin: 0 14px;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255, 255, 255, 0.3);
       font-size: 20px;
       line-height: 1;
     }
@@ -246,7 +258,10 @@
       transition: background 0.12s, border-color 0.12s;
     }
 
-    .btn:hover { background: #155c32; border-color: #155c32; }
+    .btn:hover {
+      background: #155c32;
+      border-color: #155c32;
+    }
 
     .btn-secondary {
       background: transparent;
@@ -254,16 +269,22 @@
       border-color: var(--line);
     }
 
-    .btn-secondary:hover { border-color: var(--text); background: var(--surface); }
+    .btn-secondary:hover {
+      border-color: var(--text);
+      background: var(--surface);
+    }
 
     /* Secondary button override inside hero (dark background) */
     .hero .btn-secondary {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255, 255, 255, 0.1);
       color: #fff;
-      border-color: rgba(255,255,255,0.4);
+      border-color: rgba(255, 255, 255, 0.4);
     }
 
-    .hero .btn-secondary:hover { border-color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.18); }
+    .hero .btn-secondary:hover {
+      border-color: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.18);
+    }
 
     /* ─── Content ─── */
     .content-wrap {
@@ -280,20 +301,24 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .section:last-child { border-bottom: none; }
+    .section:last-child {
+      border-bottom: none;
+    }
 
     /* About has no heading — give it room */
-    #about { padding-top: 68px; }
+    #about {
+      padding-top: 68px;
+    }
 
     /* Lead paragraph for the About opener */
-    #about > p:first-child {
+    #about>p:first-child {
       font-size: clamp(16px, 1.5vw, 18px);
       line-height: 1.8;
       color: var(--text);
       margin-bottom: 22px;
     }
 
-    .section > h3 {
+    .section>h3 {
       font-size: clamp(22px, 2.6vw, 34px);
       font-weight: 700;
       letter-spacing: -0.02em;
@@ -311,7 +336,7 @@
       margin-left: 10px;
     }
 
-    .section > p {
+    .section>p {
       font-size: 17px;
       line-height: 1.8;
       color: var(--text);
@@ -319,8 +344,14 @@
       margin: 0 0 16px;
     }
 
-    .section > p:last-child { margin-bottom: 0; }
-    .section > p strong { font-weight: 700; opacity: 1; }
+    .section>p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section>p strong {
+      font-weight: 700;
+      opacity: 1;
+    }
 
     .section ul {
       list-style: none;
@@ -337,8 +368,14 @@
       line-height: 1.7;
     }
 
-    .section ul li:first-child { border-top: 1px solid var(--line); }
-    .section ul li strong { font-weight: 700; opacity: 1; }
+    .section ul li:first-child {
+      border-top: 1px solid var(--line);
+    }
+
+    .section ul li strong {
+      font-weight: 700;
+      opacity: 1;
+    }
 
     /* ─── Timeline (Important Dates) ─── */
     .tl {
@@ -354,7 +391,9 @@
       border-bottom: 1px solid var(--line);
     }
 
-    .tl-item:last-child { border-bottom: none; }
+    .tl-item:last-child {
+      border-bottom: none;
+    }
 
     .tl-dot {
       position: absolute;
@@ -378,7 +417,11 @@
       transition: background 0.15s;
     }
 
-    .tl-item:hover .tl-row { background: var(--surface); padding: 0 8px; margin: 0 -8px; }
+    .tl-item:hover .tl-row {
+      background: var(--surface);
+      padding: 0 8px;
+      margin: 0 -8px;
+    }
 
     .tl-name {
       font-size: 16px;
@@ -424,8 +467,14 @@
       background: var(--line);
       border-color: var(--line);
     }
-    .tl-item.is-past .tl-name { opacity: 0.28; }
-    .tl-item.is-past .tl-date { opacity: 0.22; }
+
+    .tl-item.is-past .tl-name {
+      opacity: 0.28;
+    }
+
+    .tl-item.is-past .tl-date {
+      opacity: 0.22;
+    }
 
     /* ── next ── */
     .tl-item.is-next .tl-dot {
@@ -433,21 +482,47 @@
       border-color: var(--accent);
       animation: tl-pulse 2.2s ease-in-out infinite;
     }
-    .tl-item.is-next .tl-row { background: var(--accent-bg); padding: 4px 10px; margin: 0 -10px; }
-    .tl-item.is-next .tl-name { opacity: 1; font-weight: 600; flex-wrap: nowrap; }
-    .tl-item.is-next .tl-date { color: var(--accent); opacity: 1; }
+
+    .tl-item.is-next .tl-row {
+      background: var(--accent-bg);
+      padding: 4px 10px;
+      margin: 0 -10px;
+    }
+
+    .tl-item.is-next .tl-name {
+      opacity: 1;
+      font-weight: 600;
+      flex-wrap: nowrap;
+    }
+
+    .tl-item.is-next .tl-date {
+      color: var(--accent);
+      opacity: 1;
+    }
 
     @keyframes tl-pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(28,122,67,0.3); }
-      50%       { box-shadow: 0 0 0 8px rgba(28,122,67,0); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(28, 122, 67, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 0 0 8px rgba(28, 122, 67, 0);
+      }
     }
 
     /* ── workshop (final item) — only larger dot, no auto-highlight ── */
     .tl-final .tl-dot {
-      width: 14px; height: 14px;
-      left: -32px; top: 24px;
+      width: 14px;
+      height: 14px;
+      left: -32px;
+      top: 24px;
     }
-    .tl-final .tl-name { font-weight: 700; }
+
+    .tl-final .tl-name {
+      font-weight: 700;
+    }
 
     /* ─── Submission Section ─── */
     .sub-paper-grid {
@@ -465,7 +540,9 @@
       transition: background 0.14s;
     }
 
-    .sub-paper-card:hover { background: var(--surface); }
+    .sub-paper-card:hover {
+      background: var(--surface);
+    }
 
     .sub-paper-type {
       font-size: 16.5px;
@@ -524,7 +601,10 @@
       flex-shrink: 0;
     }
 
-    .sub-meta-item strong { font-weight: 700; opacity: 1; }
+    .sub-meta-item strong {
+      font-weight: 700;
+      opacity: 1;
+    }
 
     /* ─── Notice Box ─── */
     .notice-box {
@@ -575,7 +655,9 @@
       transition: background 0.14s;
     }
 
-    .topic-card:hover { background: var(--surface); }
+    .topic-card:hover {
+      background: var(--surface);
+    }
 
     .topic-num {
       display: inline;
@@ -637,7 +719,9 @@
       font-size: 15px;
     }
 
-    .schedule-table tbody tr:last-child td { border-bottom: none; }
+    .schedule-table tbody tr:last-child td {
+      border-bottom: none;
+    }
 
     /* Time column */
     .schedule-table td.time {
@@ -677,10 +761,17 @@
 
     /* Break + Lunch — muted, recedes */
     .schedule-table tr.break-row td,
-    .schedule-table tr.lunch-row td { color: var(--muted); }
+    .schedule-table tr.lunch-row td {
+      color: var(--muted);
+    }
 
-    .schedule-table tbody tr:hover td { background: var(--surface); }
-    .schedule-table tbody tr { transition: background 0.1s; }
+    .schedule-table tbody tr:hover td {
+      background: var(--surface);
+    }
+
+    .schedule-table tbody tr {
+      transition: background 0.1s;
+    }
 
     /* ─── People ─── */
     .people-grid {
@@ -710,12 +801,12 @@
       transform: translateY(-4px);
     }
 
-    .person > a {
+    .person>a {
       display: block;
       line-height: 0;
     }
 
-    .person > a::after {
+    .person>a::after {
       content: '';
       position: absolute;
       inset: 0;
@@ -739,7 +830,9 @@
       z-index: 0;
     }
 
-    .person:hover .avatar { opacity: 0.9; }
+    .person:hover .avatar {
+      opacity: 0.9;
+    }
 
     .person .meta {
       display: flex;
@@ -775,7 +868,9 @@
       transition: color 0.12s;
     }
 
-    .person:hover .name { color: var(--accent); }
+    .person:hover .name {
+      color: var(--accent);
+    }
 
     .person .aff {
       font-size: 12.5px;
@@ -786,31 +881,90 @@
 
     /* ─── Responsive ─── */
     @media (max-width: 980px) {
-      #sticky-nav { padding: 0 32px; }
-      .hero { padding: 60px 32px 68px; }
-      .content-wrap { padding: 0 32px 100px; }
-      .topic-grid { grid-template-columns: repeat(2, 1fr); }
-      .people-grid { grid-template-columns: repeat(4, 1fr); }
+      #sticky-nav {
+        padding: 0 32px;
+      }
+
+      .hero {
+        padding: 60px 32px 68px;
+      }
+
+      .content-wrap {
+        padding: 0 32px 100px;
+      }
+
+      .topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .people-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
     }
 
     @media (max-width: 760px) {
-      #sticky-nav { padding: 0 20px; overflow-x: auto; scrollbar-width: none; }
-      #sticky-nav::-webkit-scrollbar { display: none; }
-      #sticky-nav .nav-brand { display: none; }
-      #sticky-nav .nav-links { gap: 2px; }
-      .hero { padding: 48px 20px 56px; }
-      .content-wrap { padding: 0 20px 80px; }
-      .section { padding: 44px 0; }
-      #about { padding-top: 52px; }
-      .people-grid { grid-template-columns: repeat(2, 1fr); gap: 14px 10px; }
-      .topic-grid { grid-template-columns: 1fr; }
-      .sub-paper-grid { grid-template-columns: 1fr; }
-      .dates li { flex-direction: column; gap: 3px; }
-      .cta-row { flex-direction: column; align-items: flex-start; }
+      #sticky-nav {
+        padding: 0 20px;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      #sticky-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      #sticky-nav .nav-brand {
+        display: none;
+      }
+
+      #sticky-nav .nav-links {
+        gap: 2px;
+      }
+
+      .hero {
+        padding: 48px 20px 56px;
+      }
+
+      .content-wrap {
+        padding: 0 20px 80px;
+      }
+
+      .section {
+        padding: 44px 0;
+      }
+
+      #about {
+        padding-top: 52px;
+      }
+
+      .people-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px 10px;
+      }
+
+      .topic-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sub-paper-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dates li {
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .cta-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     @media (max-width: 480px) {
-      .hero { padding: 40px 20px 48px; }
+      .hero {
+        padding: 40px 20px 48px;
+      }
     }
 
     /* ─── Footer ─── */
@@ -823,247 +977,454 @@
     }
 
     @media (max-width: 760px) {
-      .site-footer { padding: 20px 20px; }
-    }
-</style>
-</head>
-<body>
-<nav aria-label="Primary navigation" id="sticky-nav">
-  <a class="nav-brand" href="#">
-    <span class="brand-name">MUCG</span>
-    <span class="brand-sep">|</span><span class="brand-meta">&nbsp; ECCV 2026</span>
-  </a>
-  <div class="nav-links">
-    <a href="#about">About</a>
-    <a href="#topics">Topics</a>
-    <a href="#submission">Submission</a>
-    <a href="#dates">Dates</a>
-    <a href="#schedule">Schedule</a>
-    <a href="#speakers">Speakers</a>
-    <a href="#organizers">Organizers</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-<header class="hero">
-<div aria-hidden="true" class="shape-cloud">
-<div class="shape s1"></div>
-<div class="shape s2 alt"></div>
-<div class="shape s3"></div>
-<div class="shape s4 alt"></div>
-<div class="shape s5"></div>
-<div class="shape s6 alt"></div>
-</div>
-<div class="hero-main">
-  <div class="hero-conference-badge">2<span class="ord">nd</span> MUCG <span class="at-sign">@</span>&nbsp;<a href="https://eccv.ecva.net" rel="noopener" target="_blank">ECCV 2026</a></div>
-  <h2>Multimodal Large Language Models for Unified Comprehension and Generation</h2>
-  <div class="hero-meta">
-    <span class="hero-pill">🗓️ September 8–12, 2026</span>
-    <span class="hero-pill">📍 Malmö, Sweden</span>
-  </div>
-  <div class="hero-cta">
-    <a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles" rel="noopener" target="_blank">Submit Paper</a>
-    <a class="btn btn-secondary" href="#about">Learn More</a>
-  </div>
-</div>
-</header>
-<main class="content-wrap">
-<section class="section" id="about">
-<p><strong>Welcome to the ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and Generation.</strong> This workshop aims to consolidate emerging research on unified multimodal intelligence, with a focus on systems that understand, generate, and act across modalities within a coherent framework.</p>
-<p>Recent multimodal AI has evolved from vision-language understanding toward broader multimodal foundation models spanning image, video, audio, 3D, and generation. At the same time, the community is moving from modular pipelines toward unified tokenization, hybrid autoregressive-diffusion designs, shared representations, and synergistic learning between understanding and generation.</p>
-<p>Our goal is to bring together researchers from academia and industry to discuss architectural designs, tokenization strategies, training objectives, evaluation protocols, and practical challenges for building general-purpose multimodal systems.</p>
-</section>
-<section class="section" id="topics">
-<h3>Topics and Themes</h3>
-<p>We welcome technical, position, and perspective papers related to unified multimodal modeling. Topics of interest include, but are not limited to:</p>
-<div class="topic-grid">
-<div class="topic-card"><span class="topic-num">01</span><h4>Unified Multimodal Understanding</h4><p>Captioning, VQA, retrieval, grounding, segmentation, reasoning, visual document understanding, long-video understanding, and cross-modal knowledge extraction.</p></div>
-<div class="topic-card"><span class="topic-num">02</span><h4>Unified Multimodal Content Generation</h4><p>Text-to-image/video, image-to-image, controllable generation, sequential image generation, visual editing, and cross-modal generative modeling.</p></div>
-<div class="topic-card"><span class="topic-num">03</span><h4>Unified MLLM Understanding and Generation</h4><p>Architectures and objectives that jointly model comprehension and generation, including autoregressive, diffusion, flow-based, and hybrid paradigms.</p></div>
-<div class="topic-card"><span class="topic-num">04</span><h4>Synergistic Learning</h4><p>How understanding and generation, or different modalities and tasks, can mutually enhance each other during pre-training, instruction tuning, and post-training.</p></div>
-<div class="topic-card"><span class="topic-num">05</span><h4>Benchmarking and Evaluation</h4><p>Evaluation protocols and benchmarks for unified multimodal systems, including realism, controllability, generalization, reasoning, and fair comparison.</p></div>
-<div class="topic-card"><span class="topic-num">06</span><h4>Broader Directions</h4><p>Reinforcement learning for unified modeling, multimodal chain-of-thought, joint vision-language/audio/3D models, cross-task transfer, and efficient training.</p></div>
-</div>
-</section>
-<section class="section" id="submission">
-<h3>Submission Instructions</h3>
-<p>The workshop accepts two submission tracks to encourage broader participation:</p>
-
-<div class="sub-paper-grid">
-  <div class="sub-paper-card">
-    <div class="sub-paper-type">Regular Archival Submissions</div>
-    <div class="sub-paper-pages">Up to 14 <span>pages</span></div>
-    <p class="sub-paper-desc">Regular archival papers may be up to 14 pages long, including figures and tables, and should use Springer LNCS formatting. Additional pages containing only cited references are permitted. Submissions must follow the ECCV 2026 template and be uploaded through OpenReview. The review process is double-blind and managed by the workshop organizers and program committee. Conflicts of interest will be handled according to the <a href="https://eccv.ecva.net/Conferences/2026/SubmissionPolicies">ECCV 2026 Submission Policy</a>.</p>
-  </div>
-  <div class="sub-paper-card">
-    <div class="sub-paper-type">Non-Archival Submissions</div>
-    <div class="sub-paper-pages">At least 4 <span>pages</span></div>
-    <p class="sub-paper-desc">Non-archival submissions are intended for work that is already published or that authors prefer not to include in the proceedings. Eligible papers include those already peer-reviewed at major CV/ML conferences or journals. Previously reviewed or published papers will not be re-reviewed; acceptance is based on topical fit and poster-board availability. Unpublished submissions in this track will undergo double-blind review, following the same review process as regular archival submissions. Authors should submit the paper or a link to the paper via the workshop's OpenReview page.</p>
-  </div>
-</div>
-
-<div class="sub-meta">
-  <div class="sub-meta-item">All accepted papers will be presented as posters.</div>
-  <div class="sub-meta-item"><strong>Best Paper Awards</strong> will be selected based on reviewer scores and committee evaluation.</div>
-</div>
-
-<div class="notice-box">Submissions are handled through the official ECCV 2026 MUCG OpenReview site.</div>
-<div class="cta-row">
-<a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles" rel="noopener" target="_blank">Submit Paper</a>
-<a class="btn btn-secondary" href="#dates">View Important Dates</a>
-<a class="btn btn-secondary" href="#schedule">View Schedule</a>
-</div>
-</section>
-<section class="section" id="dates">
-<h3>Important Dates <span class="subtle">(AoE)</span></h3>
-<div class="tl">
-  <div class="tl-item" data-date="2026-07-01">
-    <div class="tl-dot"></div>
-    <div class="tl-row"><span class="tl-name">Archival submission deadline</span><span class="tl-date">Jul 1</span></div>
-  </div>
-  <div class="tl-item" data-date="2026-07-14">
-    <div class="tl-dot"></div>
-    <div class="tl-row"><span class="tl-name">Archival reviews due</span><span class="tl-date">Jul 14</span></div>
-  </div>
-  <div class="tl-item" data-date="2026-07-18">
-    <div class="tl-dot"></div>
-    <div class="tl-row"><span class="tl-name">Archival notification</span><span class="tl-date">Jul 18</span></div>
-  </div>
-  <div class="tl-item" data-date="2026-07-25">
-    <div class="tl-dot"></div>
-    <div class="tl-row"><span class="tl-name">Non-archival submission deadline</span><span class="tl-date">Jul 25</span></div>
-  </div>
-  <div class="tl-item" data-date="2026-08-07">
-    <div class="tl-dot"></div>
-    <div class="tl-row"><span class="tl-name">Non-archival notification</span><span class="tl-date">Aug 7</span></div>
-  </div>
-  <div class="tl-item" data-date="2026-08-08" data-date-end="2026-08-13">
-    <div class="tl-dot"></div>
-    <div class="tl-row"><span class="tl-name">Camera-ready deadline for all accepted papers</span><span class="tl-date">Aug 8–12</span></div>
-  </div>
-  <div class="tl-item" data-date="2026-08-20">
-    <div class="tl-dot"></div>
-    <div class="tl-row"><span class="tl-name">Metadata deadline</span><span class="tl-date">Aug 20</span></div>
-  </div>
-  <div class="tl-item tl-final" data-date="2026-09-08" data-date-end="2026-09-13">
-    <div class="tl-dot"></div>
-    <div class="tl-row"><span class="tl-name">Workshop <span class="tl-sub">(during ECCV 2026)</span></span><span class="tl-date">Sep 8–12</span></div>
-  </div>
-</div>
-</section>
-<section class="section" id="schedule">
-<h3>Schedule <span class="subtle">(tentative)</span></h3>
-<p>The workshop will be hybrid, supporting both onsite and online participation. The program consists of invited keynote talks, oral and poster presentations of accepted papers, and a closing panel on future directions in unified multimodal intelligence.</p>
-<div class="schedule-wrap">
-<table aria-label="Tentative workshop schedule" class="schedule-table">
-<thead>
-<tr><th>Time</th><th>Schedule</th><th>Speaker</th></tr>
-</thead>
-<tbody>
-<tr class="admin-row"><td class="time">08:50 – 09:00</td><td>Introduction and Opening Remarks</td><td class="spk">Organizers</td></tr>
-<tr class="keynote-row"><td class="time">09:00 – 09:30</td><td>Keynote Talk 1</td><td class="spk">TBD</td></tr>
-<tr class="keynote-row"><td class="time">09:30 – 10:00</td><td>Keynote Talk 2</td><td class="spk">TBD</td></tr>
-<tr class="oral-row"><td class="time">10:00 – 10:40</td><td>Oral Presentations (Session 1)</td><td class="spk">Selected authors</td></tr>
-<tr class="break-row"><td class="time">10:40 – 11:00</td><td>Coffee Break</td><td></td></tr>
-<tr class="keynote-row"><td class="time">11:00 – 11:30</td><td>Keynote Talk 3</td><td class="spk">TBD</td></tr>
-<tr class="keynote-row"><td class="time">11:30 – 12:00</td><td>Keynote Talk 4</td><td class="spk">TBD</td></tr>
-<tr class="poster-row"><td class="time">12:00 – 12:30</td><td>Poster Session 1 (Interactive) + Virtual Gallery</td><td class="spk">Accepted authors</td></tr>
-<tr class="lunch-row"><td class="time">12:30 – 13:30</td><td>Lunch Break</td><td></td></tr>
-<tr class="keynote-row"><td class="time">13:30 – 14:00</td><td>Keynote Talk 5</td><td class="spk">TBD</td></tr>
-<tr class="keynote-row"><td class="time">14:00 – 14:30</td><td>Keynote Talk 6</td><td class="spk">TBD</td></tr>
-<tr class="poster-row"><td class="time">14:30 – 15:20</td><td>Poster Session 2 (Interactive) + Virtual Gallery</td><td class="spk">Accepted authors</td></tr>
-<tr class="break-row"><td class="time">15:20 – 15:50</td><td>Coffee Break</td><td></td></tr>
-<tr class="keynote-row"><td class="time">15:50 – 16:20</td><td>Keynote Talk 7</td><td class="spk">TBD</td></tr>
-<tr class="panel-row"><td class="time">16:20 – 17:20</td><td>Panel Discussion</td><td class="spk">TBD</td></tr>
-<tr class="admin-row"><td class="time">17:20 – 17:30</td><td>Closing Remarks + Best Paper Award</td><td class="spk">Organizers</td></tr>
-</tbody>
-</table>
-</div>
-</section>
-<section class="section" id="speakers">
-<h3>Invited Speakers</h3>
-<div class="people-grid">
-<div class="person"><a href="https://sites.google.com/view/showlab" rel="noopener" target="_blank"><img alt="Mike Z. Shou" class="avatar" loading="lazy" src="assets/photos/mike_shou.jpg"/></a><div class="meta"><span class="name">Mike Z. Shou</span><span class="aff">National University of Singapore</span></div></div><div class="person"><a href="https://www.cs.unc.edu/~mbansal/" rel="noopener" target="_blank"><img alt="Mohit Bansal" class="avatar" loading="lazy" src="assets/photos/mohit_bansal.png"/></a><div class="meta"><span class="name">Mohit Bansal</span><span class="aff">University of North Carolina Chapel Hill</span></div></div><div class="person"><a href="https://haoqifan.github.io/" rel="noopener" target="_blank"><img alt="Haoqi Fan" class="avatar" loading="lazy" src="assets/photos/haoqi_fan.jpg"/></a><div class="meta"><span class="name">Haoqi Fan</span><span class="aff">ByteDance Seed</span></div></div><div class="person"><a href="https://www.mmlab-ntu.com/person/ccloy/" rel="noopener" target="_blank"><img alt="Chen Change Loy" class="avatar" loading="lazy" src="assets/photos/chen_change_loy.png" style="object-position: 90% 15%;"/></a><div class="meta"><span class="name">Chen Change Loy</span><span class="aff">Nanyang Technological University</span></div></div><div class="person"><a href="https://www.rogerioferis.org/" rel="noopener" target="_blank"><img alt="Rogerio Schmidt Feris" class="avatar" loading="lazy" src="assets/photos/rogerio_feris.webp"/></a><div class="meta"><span class="name">Rogerio Schmidt Feris</span><span class="aff">MIT-IBM Watson AI Lab</span></div></div><div class="person"><a href="https://maureenzou.github.io/" rel="noopener" target="_blank"><img alt="Xueyan Zou" class="avatar" loading="lazy" src="assets/photos/xueyan_zou.jpg"/></a><div class="meta"><span class="name">Xueyan Zou</span><span class="aff">UC San Diego</span></div></div><div class="person"><a href="https://j-min.io/" rel="noopener" target="_blank"><img alt="Jaemin Cho" class="avatar" loading="lazy" src="assets/photos/jaemin_cho.png"/></a><div class="meta"><span class="name">Jaemin Cho</span><span class="aff">Allen Institute for AI / Johns Hopkins University</span></div></div>
-</div>
-</section>
-<section class="section" id="organizers">
-<h3>Organizing Committee</h3>
-<div class="people-grid">
-<div class="person"><a href="https://sqwu.top/" rel="noopener" target="_blank"><img alt="Shengqiong Wu" class="avatar" loading="lazy" src="assets/photos/shengqiong_wu.jpg"/></a><div class="meta"><span class="name">Shengqiong Wu</span><span class="role">Organizer</span><span class="aff">National University of Singapore</span></div></div><div class="person"><a href="https://sierkinhane.github.io/" rel="noopener" target="_blank"><img alt="Jinheng Xie" class="avatar" loading="lazy" src="assets/photos/jinheng_xie.jpg" style="object-position: 58% 15%;"/></a><div class="meta"><span class="name">Jinheng Xie</span><span class="role">Organizer</span><span class="aff">National University of Singapore</span></div></div><div class="person"><a href="https://haozheliu-st.github.io/" rel="noopener" target="_blank"><img alt="Haozhe Liu" class="avatar" loading="lazy" src="assets/photos/haozhe_liu.jpg"/></a><div class="meta"><span class="name">Haozhe Liu</span><span class="role">Organizer</span><span class="aff">KAUST</span></div></div><div class="person"><a href="https://xieenze.github.io/" rel="noopener" target="_blank"><img alt="Enze Xie" class="avatar" loading="lazy" src="assets/photos/enze_xie.png"/></a><div class="meta"><span class="name">Enze Xie</span><span class="role">Organizer</span><span class="aff">NVIDIA Research / MIT HAN Lab</span></div></div><div class="person"><a href="https://sivandoveh.github.io/" rel="noopener" target="_blank"><img alt="Sivan Doveh" class="avatar" loading="lazy" src="assets/photos/sivan_doveh.jpg"/></a><div class="meta"><span class="name">Sivan Doveh</span><span class="role">Organizer</span><span class="aff">Stanford University</span></div></div><div class="person"><a href="https://annusha.github.io/" rel="noopener" target="_blank"><img alt="Anna Kukleva" class="avatar" loading="lazy" src="assets/photos/anna_kukleva.jpg"/></a><div class="meta"><span class="name">Anna Kukleva</span><span class="role">Organizer</span><span class="aff">Max Planck Institute for Informatics</span></div></div><div class="person"><a href="https://xichenpan.com/" rel="noopener" target="_blank"><img alt="Xichen Pan" class="avatar" loading="lazy" src="assets/photos/xichen_pan.jpeg"/></a><div class="meta"><span class="name">Xichen Pan</span><span class="role">Organizer</span><span class="aff">New York University</span></div></div><div class="person"><a href="https://jmiemirza.github.io/" rel="noopener" target="_blank"><img alt="Jehanzeb Mirza" class="avatar" loading="lazy" src="assets/photos/jehanzeb_mirza.png"/></a><div class="meta"><span class="name">Jehanzeb Mirza</span><span class="role">Organizer</span><span class="aff">MIT CSAIL</span></div></div><div class="person"><a href="https://metauto.ai/" rel="noopener" target="_blank"><img alt="Mingchen Zhuge" class="avatar" loading="lazy" src="assets/photos/mingchen_zhuge.jpg"/></a><div class="meta"><span class="name">Mingchen Zhuge</span><span class="role">Organizer</span><span class="aff">KAUST</span></div></div><div class="person"><a href="https://owen718.github.io/" rel="noopener" target="_blank"><img alt="Tian Ye" class="avatar" loading="lazy" src="assets/photos/tian_ye.jpg"/></a><div class="meta"><span class="name">Tian Ye</span><span class="role">Organizer</span><span class="aff">HKUST(GZ) &amp; NVIDIA Research</span></div></div><div class="person"><a href="https://scholar.google.com/citations?user=22p-FwoAAAAJ&hl=en" rel="noopener" target="_blank"><img alt="Yanguang Zhao" class="avatar" loading="lazy" src="assets/photos/yanguang_zhao.jpg"/></a><div class="meta"><span class="name">Yanguang Zhao</span><span class="role role-executor">Executor</span><span class="aff">National University of Singapore</span></div></div>
-</div>
-</section>
-<section class="section" id="diversity">
-<h3>Diversity and Inclusion</h3>
-<p>We are committed to promoting diversity and inclusion across the organizing committee, invited speakers, program committee, accepted papers, and audience. We will proactively encourage submissions from underrepresented groups and institutions, provide inclusive wording in the call for papers, support mentoring opportunities during poster sessions and panels, and ensure virtual access for remote or resource-constrained participants.</p>
-</section>
-<section class="section" id="contact">
-<h3>Contact</h3>
-<p>Questions? Please contact the workshop organizers. A dedicated contact email will be added soon.</p>
-</section>
-</main>
-<footer class="site-footer">
-  &copy; 2026 MUCG. All rights reserved.
-</footer>
-<script>
-(function () {
-  var sections = document.querySelectorAll('section[id]');
-  var navLinks = document.querySelectorAll('#sticky-nav .nav-links a[href^="#"]');
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        navLinks.forEach(function (link) {
-          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
-        });
+      .site-footer {
+        padding: 20px 20px;
       }
-    });
-  }, { rootMargin: '-10% 0px -80% 0px' });
-  sections.forEach(function (s) { observer.observe(s); });
-})();
-
-// ── Timeline: mark past / next items based on AoE (UTC-12) ──
-function runTimeline() {
-  // AoE helpers — all comparisons use UTC to avoid local-timezone drift
-  function aoeEnd(s) {
-    // A deadline "day s" is fully over when UTC-12 enters the next day
-    // = (s + 1 day) at 12:00 UTC
-    var p = s.split('-');
-    return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1, 12, 0, 0));
-  }
-  function aoeStart(s) {
-    // A date "s" has started in AoE when UTC reaches s 12:00
-    var p = s.split('-');
-    return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2], 12, 0, 0));
-  }
-
-  var now = new Date();
-  var items = document.querySelectorAll('.tl-item[data-date]');
-  var nextFound = false;
-  items.forEach(function (item) {
-    var dateStr = item.getAttribute('data-date');
-    var endStr  = item.getAttribute('data-date-end');
-    var isPast, isOngoing;
-    if (endStr) {
-      var dStart = aoeStart(dateStr); // event begins
-      var dEnd   = aoeStart(endStr);  // end-date begins → event is over
-      isPast    = now >= dEnd;
-      isOngoing = now >= dStart && now < dEnd;
-    } else {
-      isPast    = now >= aoeEnd(dateStr);
-      isOngoing = false;
     }
-    if (isPast) {
-      item.classList.add('is-past');
-    } else if (!nextFound) {
-      item.classList.add('is-next');
-      nextFound = true;
-      var badge = document.createElement('span');
-      badge.className = 'tl-badge';
-      badge.textContent = isOngoing ? 'Ongoing' : 'Next';
-      var nameEl = item.querySelector('.tl-name');
-      if (nameEl) nameEl.appendChild(badge);
+  </style>
+</head>
+
+<body>
+  <nav aria-label="Primary navigation" id="sticky-nav">
+    <a class="nav-brand" href="#">
+      <span class="brand-name">MUCG</span>
+      <span class="brand-sep">|</span><span class="brand-meta">&nbsp; ECCV 2026</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#topics">Topics</a>
+      <a href="#submission">Submission</a>
+      <a href="#dates">Dates</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#organizers">Organizers</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+  <header class="hero">
+    <div aria-hidden="true" class="shape-cloud">
+      <div class="shape s1"></div>
+      <div class="shape s2 alt"></div>
+      <div class="shape s3"></div>
+      <div class="shape s4 alt"></div>
+      <div class="shape s5"></div>
+      <div class="shape s6 alt"></div>
+    </div>
+    <div class="hero-main">
+      <div class="hero-conference-badge">2<span class="ord">nd</span> MUCG <span class="at-sign">@</span>&nbsp;<a
+          href="https://eccv.ecva.net" rel="noopener" target="_blank">ECCV 2026</a></div>
+      <h2>Multimodal Large Language Models for Unified Comprehension and Generation</h2>
+      <div class="hero-meta">
+        <span class="hero-pill">🗓️ September 8–12, 2026</span>
+        <span class="hero-pill">📍 Malmö, Sweden</span>
+      </div>
+      <div class="hero-cta">
+        <a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles"
+          rel="noopener" target="_blank">Submit Paper</a>
+        <a class="btn btn-secondary" href="#about">Learn More</a>
+      </div>
+    </div>
+  </header>
+  <main class="content-wrap">
+    <section class="section" id="about">
+      <p><strong>Welcome to the ECCV 2026 Workshop on Multimodal Large Language Models for Unified Comprehension and
+          Generation.</strong> This workshop aims to consolidate emerging research on unified multimodal intelligence,
+        with a focus on systems that understand, generate, and act across modalities within a coherent framework.</p>
+      <p>Recent multimodal AI has evolved from vision-language understanding toward broader multimodal foundation models
+        spanning image, video, audio, 3D, and generation. At the same time, the community is moving from modular
+        pipelines toward unified tokenization, hybrid autoregressive-diffusion designs, shared representations, and
+        synergistic learning between understanding and generation.</p>
+      <p>Our goal is to bring together researchers from academia and industry to discuss architectural designs,
+        tokenization strategies, training objectives, evaluation protocols, and practical challenges for building
+        general-purpose multimodal systems.</p>
+    </section>
+    <section class="section" id="topics">
+      <h3>Topics and Themes</h3>
+      <p>We welcome technical, position, and perspective papers related to unified multimodal modeling. Topics of
+        interest include, but are not limited to:</p>
+      <div class="topic-grid">
+        <div class="topic-card"><span class="topic-num">01</span>
+          <h4>Unified Multimodal Understanding</h4>
+          <p>Captioning, VQA, retrieval, grounding, segmentation, reasoning, visual document understanding, long-video
+            understanding, and cross-modal knowledge extraction.</p>
+        </div>
+        <div class="topic-card"><span class="topic-num">02</span>
+          <h4>Unified Multimodal Content Generation</h4>
+          <p>Text-to-image/video, image-to-image, controllable generation, sequential image generation, visual editing,
+            and cross-modal generative modeling.</p>
+        </div>
+        <div class="topic-card"><span class="topic-num">03</span>
+          <h4>Unified MLLM Understanding and Generation</h4>
+          <p>Architectures and objectives that jointly model comprehension and generation, including autoregressive,
+            diffusion, flow-based, and hybrid paradigms.</p>
+        </div>
+        <div class="topic-card"><span class="topic-num">04</span>
+          <h4>Synergistic Learning</h4>
+          <p>How understanding and generation, or different modalities and tasks, can mutually enhance each other during
+            pre-training, instruction tuning, and post-training.</p>
+        </div>
+        <div class="topic-card"><span class="topic-num">05</span>
+          <h4>Benchmarking and Evaluation</h4>
+          <p>Evaluation protocols and benchmarks for unified multimodal systems, including realism, controllability,
+            generalization, reasoning, and fair comparison.</p>
+        </div>
+        <div class="topic-card"><span class="topic-num">06</span>
+          <h4>Broader Directions</h4>
+          <p>Reinforcement learning for unified modeling, multimodal chain-of-thought, joint vision-language/audio/3D
+            models, cross-task transfer, and efficient training.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="submission">
+      <h3>Submission Instructions</h3>
+      <p>The workshop accepts two submission tracks to encourage broader participation:</p>
+
+      <div class="sub-paper-grid">
+        <div class="sub-paper-card">
+          <div class="sub-paper-type">Regular Archival Submissions</div>
+          <div class="sub-paper-pages">Up to 14 <span>pages</span></div>
+          <p class="sub-paper-desc">Regular archival papers may be up to 14 pages long, including figures and tables, and should use Springer LNCS formatting. Additional pages containing only cited references are permitted. Submissions must follow the ECCV 2026 template and be uploaded through OpenReview. The review process is double-blind and managed by the workshop organizers and program committee. Conflicts of interest will be handled according to the <a href="https://eccv.ecva.net/Conferences/2026/SubmissionPolicies">ECCV 2026 Submission Policy</a>.</p>
+        </div>
+        <div class="sub-paper-card">
+          <div class="sub-paper-type">Non-Archival Submissions</div>
+          <div class="sub-paper-pages">At least 4 <span>pages</span></div>
+          <p class="sub-paper-desc">Non-archival submissions are intended for work that is already published or that authors prefer not to include in the proceedings. Eligible papers include those already peer-reviewed at major CV/ML conferences or journals. Previously reviewed or published papers will not be re-reviewed; acceptance is based on topical fit and poster-board availability. Unpublished submissions in this track will undergo double-blind review, following the same review process as regular archival submissions. Authors should submit the paper or a link to the paper via the workshop's OpenReview page.</p>
+        </div>
+      </div>
+
+      <div class="sub-meta">
+        <div class="sub-meta-item">All accepted papers will be presented as posters.</div>
+        <div class="sub-meta-item"><strong>Best Paper Awards</strong> will be selected based on reviewer scores and
+          committee evaluation.</div>
+      </div>
+
+      <div class="notice-box">Submissions are handled through the official ECCV 2026 MUCG OpenReview site.</div>
+      <div class="cta-row">
+        <a class="btn" href="https://openreview.net/group?id=thecvf.com/ECCV/2026/Workshop/MUCG#tab-your-consoles"
+          rel="noopener" target="_blank">Submit Paper</a>
+        <a class="btn btn-secondary" href="#dates">View Important Dates</a>
+        <a class="btn btn-secondary" href="#schedule">View Schedule</a>
+      </div>
+    </section>
+    <section class="section" id="dates">
+      <h3>Important Dates <span class="subtle">(AoE)</span></h3>
+      <div class="tl">
+        <div class="tl-item" data-date="2026-07-01">
+          <div class="tl-dot"></div>
+          <div class="tl-row"><span class="tl-name">Archival submission deadline</span><span class="tl-date">Jul 01</span></div>
+        </div>
+        <div class="tl-item" data-date="2026-07-14">
+          <div class="tl-dot"></div>
+          <div class="tl-row"><span class="tl-name">Archival reviews due</span><span class="tl-date">Jul 14</span></div>
+        </div>
+        <div class="tl-item" data-date="2026-07-18">
+          <div class="tl-dot"></div>
+          <div class="tl-row"><span class="tl-name">Archival notification</span><span class="tl-date">Jul 18</span>
+          </div>
+        </div>
+        <div class="tl-item" data-date="2026-07-25">
+          <div class="tl-dot"></div>
+          <div class="tl-row"><span class="tl-name">Non-archival submission deadline</span><span class="tl-date">Jul 25</span></div>
+        </div>
+        <div class="tl-item" data-date="2026-08-07">
+          <div class="tl-dot"></div>
+          <div class="tl-row"><span class="tl-name">Non-archival notification</span><span class="tl-date">Aug 7</span>
+          </div>
+        </div>
+        <div class="tl-item" data-date="2026-08-08" data-date-end="2026-08-13">
+          <div class="tl-dot"></div>
+          <div class="tl-row"><span class="tl-name">Camera-ready deadline for all accepted papers</span><span
+              class="tl-date">Aug 8–12</span></div>
+        </div>
+        <div class="tl-item" data-date="2026-08-20">
+          <div class="tl-dot"></div>
+          <div class="tl-row"><span class="tl-name">Metadata deadline</span><span class="tl-date">Aug 20</span></div>
+        </div>
+        <div class="tl-item tl-final" data-date="2026-09-08" data-date-end="2026-09-13">
+          <div class="tl-dot"></div>
+          <div class="tl-row"><span class="tl-name">Workshop <span class="tl-sub">(during ECCV 2026)</span></span><span
+              class="tl-date">Sep 8–12</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="schedule">
+      <h3>Schedule <span class="subtle">(tentative)</span></h3>
+      <p>The workshop will be hybrid, supporting both onsite and online participation. The program consists of invited
+        keynote talks, oral and poster presentations of accepted papers, and a closing panel on future directions in
+        unified multimodal intelligence.</p>
+      <div class="schedule-wrap">
+        <table aria-label="Tentative workshop schedule" class="schedule-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Schedule</th>
+              <th>Speaker</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="admin-row">
+              <td class="time">08:50 – 09:00</td>
+              <td>Introduction and Opening Remarks</td>
+              <td class="spk">Organizers</td>
+            </tr>
+            <tr class="keynote-row">
+              <td class="time">09:00 – 09:30</td>
+              <td>Keynote Talk 1</td>
+              <td class="spk">TBD</td>
+            </tr>
+            <tr class="keynote-row">
+              <td class="time">09:30 – 10:00</td>
+              <td>Keynote Talk 2</td>
+              <td class="spk">TBD</td>
+            </tr>
+            <tr class="oral-row">
+              <td class="time">10:00 – 10:40</td>
+              <td>Oral Presentations (Session 1)</td>
+              <td class="spk">Selected authors</td>
+            </tr>
+            <tr class="break-row">
+              <td class="time">10:40 – 11:00</td>
+              <td>Coffee Break</td>
+              <td></td>
+            </tr>
+            <tr class="keynote-row">
+              <td class="time">11:00 – 11:30</td>
+              <td>Keynote Talk 3</td>
+              <td class="spk">TBD</td>
+            </tr>
+            <tr class="keynote-row">
+              <td class="time">11:30 – 12:00</td>
+              <td>Keynote Talk 4</td>
+              <td class="spk">TBD</td>
+            </tr>
+            <tr class="poster-row">
+              <td class="time">12:00 – 12:30</td>
+              <td>Poster Session 1 (Interactive) + Virtual Gallery</td>
+              <td class="spk">Accepted authors</td>
+            </tr>
+            <tr class="lunch-row">
+              <td class="time">12:30 – 13:30</td>
+              <td>Lunch Break</td>
+              <td></td>
+            </tr>
+            <tr class="keynote-row">
+              <td class="time">13:30 – 14:00</td>
+              <td>Keynote Talk 5</td>
+              <td class="spk">TBD</td>
+            </tr>
+            <tr class="keynote-row">
+              <td class="time">14:00 – 14:30</td>
+              <td>Keynote Talk 6</td>
+              <td class="spk">TBD</td>
+            </tr>
+            <tr class="poster-row">
+              <td class="time">14:30 – 15:20</td>
+              <td>Poster Session 2 (Interactive) + Virtual Gallery</td>
+              <td class="spk">Accepted authors</td>
+            </tr>
+            <tr class="break-row">
+              <td class="time">15:20 – 15:50</td>
+              <td>Coffee Break</td>
+              <td></td>
+            </tr>
+            <tr class="keynote-row">
+              <td class="time">15:50 – 16:20</td>
+              <td>Keynote Talk 7</td>
+              <td class="spk">TBD</td>
+            </tr>
+            <tr class="panel-row">
+              <td class="time">16:20 – 17:20</td>
+              <td>Panel Discussion</td>
+              <td class="spk">TBD</td>
+            </tr>
+            <tr class="admin-row">
+              <td class="time">17:20 – 17:30</td>
+              <td>Closing Remarks + Best Paper Award</td>
+              <td class="spk">Organizers</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="section" id="speakers">
+      <h3>Invited Speakers</h3>
+      <div class="people-grid">
+        <div class="person"><a href="https://sites.google.com/view/showlab" rel="noopener" target="_blank"><img
+              alt="Mike Z. Shou" class="avatar" loading="lazy" src="assets/photos/mike_shou.jpg" /></a>
+          <div class="meta"><span class="name">Mike Z. Shou</span><span class="aff">National University of
+              Singapore</span></div>
+        </div>
+        <div class="person"><a href="https://www.cs.unc.edu/~mbansal/" rel="noopener" target="_blank"><img
+              alt="Mohit Bansal" class="avatar" loading="lazy" src="assets/photos/mohit_bansal.png" /></a>
+          <div class="meta"><span class="name">Mohit Bansal</span><span class="aff">University of North Carolina Chapel
+              Hill</span></div>
+        </div>
+        <div class="person"><a href="https://haoqifan.github.io/" rel="noopener" target="_blank"><img alt="Haoqi Fan"
+              class="avatar" loading="lazy" src="assets/photos/haoqi_fan.jpg" /></a>
+          <div class="meta"><span class="name">Haoqi Fan</span><span class="aff">ByteDance Seed</span></div>
+        </div>
+        <div class="person"><a href="https://www.mmlab-ntu.com/person/ccloy/" rel="noopener" target="_blank"><img
+              alt="Chen Change Loy" class="avatar" loading="lazy" src="assets/photos/chen_change_loy.png"
+              style="object-position: 90% 15%;" /></a>
+          <div class="meta"><span class="name">Chen Change Loy</span><span class="aff">Nanyang Technological
+              University</span></div>
+        </div>
+        <div class="person"><a href="https://www.rogerioferis.org/" rel="noopener" target="_blank"><img
+              alt="Rogerio Schmidt Feris" class="avatar" loading="lazy" src="assets/photos/rogerio_feris.webp" /></a>
+          <div class="meta"><span class="name">Rogerio Schmidt Feris</span><span class="aff">MIT-IBM Watson AI
+              Lab</span></div>
+        </div>
+        <div class="person"><a href="https://maureenzou.github.io/" rel="noopener" target="_blank"><img alt="Xueyan Zou"
+              class="avatar" loading="lazy" src="assets/photos/xueyan_zou.jpg" /></a>
+          <div class="meta"><span class="name">Xueyan Zou</span><span class="aff">UC San Diego</span></div>
+        </div>
+        <div class="person"><a href="https://j-min.io/" rel="noopener" target="_blank"><img alt="Jaemin Cho"
+              class="avatar" loading="lazy" src="assets/photos/jaemin_cho.png" /></a>
+          <div class="meta"><span class="name">Jaemin Cho</span><span class="aff">Allen Institute for AI / Johns Hopkins
+              University</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="organizers">
+      <h3>Organizing Committee</h3>
+      <div class="people-grid">
+        <div class="person"><a href="https://sqwu.top/" rel="noopener" target="_blank"><img alt="Shengqiong Wu"
+              class="avatar" loading="lazy" src="assets/photos/shengqiong_wu.jpg" /></a>
+          <div class="meta"><span class="name">Shengqiong Wu</span><span class="role">Organizer</span><span
+              class="aff">University of Oxford</span></div>
+        </div>
+        <div class="person"><a href="https://sierkinhane.github.io/" rel="noopener" target="_blank"><img
+              alt="Jinheng Xie" class="avatar" loading="lazy" src="assets/photos/jinheng_xie.jpg"
+              style="object-position: 58% 15%;" /></a>
+          <div class="meta"><span class="name">Jinheng Xie</span><span class="role">Organizer</span><span
+              class="aff">National University of Singapore</span></div>
+        </div>
+        <div class="person"><a href="https://haozheliu-st.github.io/" rel="noopener" target="_blank"><img
+              alt="Haozhe Liu" class="avatar" loading="lazy" src="assets/photos/haozhe_liu.jpg" /></a>
+          <div class="meta"><span class="name">Haozhe Liu</span><span class="role">Organizer</span><span
+              class="aff">KAUST</span></div>
+        </div>
+        <div class="person"><a href="https://xieenze.github.io/" rel="noopener" target="_blank"><img alt="Enze Xie"
+              class="avatar" loading="lazy" src="assets/photos/enze_xie.png" /></a>
+          <div class="meta"><span class="name">Enze Xie</span><span class="role">Organizer</span><span
+              class="aff">NVIDIA Research / MIT HAN Lab</span></div>
+        </div>
+        <div class="person"><a href="https://sivandoveh.github.io/" rel="noopener" target="_blank"><img
+              alt="Sivan Doveh" class="avatar" loading="lazy" src="assets/photos/sivan_doveh.jpg" /></a>
+          <div class="meta"><span class="name">Sivan Doveh</span><span class="role">Organizer</span><span
+              class="aff">Stanford University</span></div>
+        </div>
+        <div class="person"><a href="https://annusha.github.io/" rel="noopener" target="_blank"><img alt="Anna Kukleva"
+              class="avatar" loading="lazy" src="assets/photos/anna_kukleva.jpg" /></a>
+          <div class="meta"><span class="name">Anna Kukleva</span><span class="role">Organizer</span><span
+              class="aff">Max Planck Institute for Informatics</span></div>
+        </div>
+        <!-- <div class="person"><a href="https://xichenpan.com/" rel="noopener" target="_blank"><img alt="Xichen Pan"
+              class="avatar" loading="lazy" src="assets/photos/xichen_pan.jpeg" /></a>
+          <div class="meta"><span class="name">Xichen Pan</span><span class="role">Organizer</span><span class="aff">New
+              York University</span></div>
+        </div> -->
+        <div class="person"><a href="https://jmiemirza.github.io/" rel="noopener" target="_blank"><img
+              alt="Jehanzeb Mirza" class="avatar" loading="lazy" src="assets/photos/jehanzeb_mirza.png" /></a>
+          <div class="meta"><span class="name">Jehanzeb Mirza</span><span class="role">Organizer</span><span
+              class="aff">MIT CSAIL</span></div>
+        </div>
+        <div class="person"><a href="https://metauto.ai/" rel="noopener" target="_blank"><img alt="Mingchen Zhuge"
+              class="avatar" loading="lazy" src="assets/photos/mingchen_zhuge.jpg" /></a>
+          <div class="meta"><span class="name">Mingchen Zhuge</span><span class="role">Organizer</span><span
+              class="aff">KAUST</span></div>
+        </div>
+        <div class="person"><a href="https://owen718.github.io/" rel="noopener" target="_blank"><img alt="Tian Ye"
+              class="avatar" loading="lazy" src="assets/photos/tian_ye.jpg" /></a>
+          <div class="meta"><span class="name">Tian Ye</span><span class="role">Organizer</span><span
+              class="aff">HKUST(GZ) &amp; NVIDIA Research</span></div>
+        </div>
+        <div class="person"><a href="https://scholar.google.com/citations?user=22p-FwoAAAAJ&hl=en" rel="noopener"
+            target="_blank"><img alt="Yanguang Zhao" class="avatar" loading="lazy"
+              src="assets/photos/yanguang_zhao.jpg" /></a>
+          <div class="meta"><span class="name">Yanguang Zhao</span><span class="role role-executor">Executor</span><span
+              class="aff">National University of Singapore</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="diversity">
+      <h3>Diversity and Inclusion</h3>
+      <p>We are committed to promoting diversity and inclusion across the organizing committee, invited speakers,
+        program committee, accepted papers, and audience. We will proactively encourage submissions from
+        underrepresented groups and institutions, provide inclusive wording in the call for papers, support mentoring
+        opportunities during poster sessions and panels, and ensure virtual access for remote or resource-constrained
+        participants.</p>
+    </section>
+    <section class="section" id="contact">
+      <h3>Contact</h3>
+      <p>Questions? Please contact the workshop organizers (shengqiongwu@gmail.com).</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    &copy; 2026 MUCG. All rights reserved.
+  </footer>
+  <script>
+    (function () {
+      var sections = document.querySelectorAll('section[id]');
+      var navLinks = document.querySelectorAll('#sticky-nav .nav-links a[href^="#"]');
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            navLinks.forEach(function (link) {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+            });
+          }
+        });
+      }, { rootMargin: '-10% 0px -80% 0px' });
+      sections.forEach(function (s) { observer.observe(s); });
+    })();
+
+    // ── Timeline: mark past / next items based on AoE (UTC-12) ──
+    function runTimeline() {
+      // AoE helpers — all comparisons use UTC to avoid local-timezone drift
+      function aoeEnd(s) {
+        // A deadline "day s" is fully over when UTC-12 enters the next day
+        // = (s + 1 day) at 12:00 UTC
+        var p = s.split('-');
+        return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1, 12, 0, 0));
+      }
+      function aoeStart(s) {
+        // A date "s" has started in AoE when UTC reaches s 12:00
+        var p = s.split('-');
+        return new Date(Date.UTC(+p[0], +p[1] - 1, +p[2], 12, 0, 0));
+      }
+
+      var now = new Date();
+      var items = document.querySelectorAll('.tl-item[data-date]');
+      var nextFound = false;
+      items.forEach(function (item) {
+        var dateStr = item.getAttribute('data-date');
+        var endStr = item.getAttribute('data-date-end');
+        var isPast, isOngoing;
+        if (endStr) {
+          var dStart = aoeStart(dateStr); // event begins
+          var dEnd = aoeStart(endStr);  // end-date begins → event is over
+          isPast = now >= dEnd;
+          isOngoing = now >= dStart && now < dEnd;
+        } else {
+          isPast = now >= aoeEnd(dateStr);
+          isOngoing = false;
+        }
+        if (isPast) {
+          item.classList.add('is-past');
+        } else if (!nextFound) {
+          item.classList.add('is-next');
+          nextFound = true;
+          var badge = document.createElement('span');
+          badge.className = 'tl-badge';
+          badge.textContent = isOngoing ? 'Ongoing' : 'Next';
+          var nameEl = item.querySelector('.tl-name');
+          if (nameEl) nameEl.appendChild(badge);
+        }
+      });
     }
-  });
-}
-runTimeline();
-</script>
+    runTimeline();
+  </script>
 </body>
+
 </html>
